@@ -8,8 +8,8 @@ import (
 	"math/rand"
 	"time"
 
+	pb "github.com/data-dorf/gotiktoklive/proto"
 	"github.com/erni27/imcache"
-	pb "github.com/steampoweredtaco/gotiktoklive/proto"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/reflect/protoreflect"
 	"google.golang.org/protobuf/reflect/protoregistry"
@@ -325,9 +325,10 @@ func toUser(u *pb.User) *User {
 		username = u.Nickname
 	}
 	user := User{
-		ID:       int64(u.Id),
-		Username: username,
-		Nickname: u.Nickname,
+		ID:        int64(u.Id),
+		Username:  username,
+		Nickname:  u.Nickname,
+		DisplayID: u.DisplayId,
 	}
 
 	if u.AvatarLarge != nil && u.AvatarJpg.UrlList != nil {

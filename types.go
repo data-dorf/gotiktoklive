@@ -242,9 +242,15 @@ type BattleGroup struct {
 }
 
 type User struct {
-	ID              int64
-	Username        string
-	Nickname        string
+	ID       int64
+	Username string
+	Nickname string
+	// DisplayID is the account's @handle, taken from the protobuf's
+	// displayId field. Username is left as upstream computes it (idStr,
+	// falling back to Nickname) so existing callers are unaffected; chat
+	// events carry an empty idStr, which makes Username a nickname in
+	// practice and leaves this the only place the real handle surfaces.
+	DisplayID       string
 	ProfilePicture  *ProfilePicture
 	ExtraAttributes *ExtraAttributes
 	Badge           *BadgeAttributes

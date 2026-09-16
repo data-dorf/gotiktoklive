@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"testing"
 
-	"github.com/steampoweredtaco/gotiktoklive/test_types"
+	"github.com/data-dorf/gotiktoklive/test_types"
 )
 
 func TestRoomID(t *testing.T) {

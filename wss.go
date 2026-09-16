@@ -11,7 +11,7 @@ import (
 	"os"
 	"time"
 
-	pb "github.com/steampoweredtaco/gotiktoklive/proto"
+	pb "github.com/data-dorf/gotiktoklive/proto"
 
 	"github.com/gobwas/ws"
 	"github.com/gobwas/ws/wsutil"

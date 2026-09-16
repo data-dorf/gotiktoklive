@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/steampoweredtaco/gotiktoklive/test_types"
+	"github.com/data-dorf/gotiktoklive/test_types"
 )
 
 func TestLiveTrackUser(t *testing.T) {

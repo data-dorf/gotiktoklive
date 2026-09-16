@@ -1,4 +1,4 @@
-module github.com/steampoweredtaco/gotiktoklive
+module github.com/data-dorf/gotiktoklive
 
 go 1.23.0
 
